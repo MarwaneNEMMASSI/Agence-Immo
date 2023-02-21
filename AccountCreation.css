@@ -1,0 +1,36 @@
+body
+{
+    background-color: #F4F8F5;
+}
+.body
+{
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar
+{
+    background-color: white;
+    height: 320px;
+    width: 55px;
+    border-radius: 100px;
+    margin-top: 150px;
+    margin-left: 10px;
+}
+img
+{
+    margin-top: 150px;
+    width: 500px;
+}
+.formulaire
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+input
+{
+    margin-right: 100px;
+    margin-bottom: 10px;
+    width: 230px;
+    height: 30px;
+}
