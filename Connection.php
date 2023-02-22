@@ -1,5 +1,7 @@
 <?php
+//Commencement d'une nouvelle session
 session_start();
+//Inclusion de la page de connexion a la base de données
 include 'DBconnection.php';
 
 $EmailErr = "";
@@ -8,6 +10,7 @@ $Error = "";
 
 
 
+//Validation du formulaire
 if(isset($_POST["submit"]))
     {
         $Email = $_POST["Email"];
@@ -26,7 +29,8 @@ if(isset($_POST["submit"]))
             {
                 $PasswordErr = "Un mot de passe est requis";
             }
-
+ 
+//Vérification de l'éxistence de l'email et du mot de passe dans la base de données
         if ($PasswordErr == "" && $EmailErr == "")
             {
                 $Ajouter = $conn->prepare("SELECT `email`, `mot de passe`, `ID_Client` FROM `client` WHERE `email` = '$Email'");
@@ -44,6 +48,8 @@ if(isset($_POST["submit"]))
                             $_SESSION["Logged_User_email"] = $Response[0]["email"];
                             $_SESSION["Logged_User_ID"] = $Response[0]["ID_Client"];
                             echo $_SESSION["Logged_User_ID"];
+                            echo session_status();
+                            header("Location: index.php");
                         }
             }
 
@@ -63,11 +69,10 @@ if(isset($_POST["submit"]))
 <body>
     
     <div class="body">
-
         <div class="sidebar">
-
+            
         </div>
-
+        
         <div>
             <img src="IconeConnexion.svg" alt="">
         </div>

@@ -1,4 +1,4 @@
-<?php
+<?php 
 // Connection a la base de données
 include 'DBconnection.php';
 
@@ -94,7 +94,6 @@ if(isset($_POST["submit"]))
                             $PasswordConfirmationErr = "Les mots de passe ne sont pas identiques";
                         }
                     $hash = password_hash($Password, PASSWORD_BCRYPT);
-                    echo password_verify($Password, $hash);
                 }
                 
         if( ($FamilynameErr == "" And $NameErr == "" And $PhoneErr == "" And $EmailErr == "" And $PasswordErr == "" And $PasswordConfirmationErr == "") And (!empty($_POST["nom"]) And !empty($_POST["prenom"]) And !empty($_POST["email"]) And !empty($_POST["telephone"]) And !empty($_POST["MotDePasse"]) And !empty($_POST["ConfirmationMotDePasse"])) )

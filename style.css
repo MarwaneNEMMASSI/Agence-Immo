@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F4F8F5;
+}
+
+header {
+    text-align: center;
+    padding: 1%;
+    background-color: white;
+}
+
+nav {
+    position: fixed;
+    left: 3%;
+    top: 20%;
+}
+
+nav>ul {
+    border-radius: 50px;
+    width: max-content;
+    padding: 70%;
+    background-color: white;
+    list-style: none;
+}
+
+nav>ul>li {
+    font-size: x-large;
+    margin: 3rem 0%;
+}
+
+section {
+    margin-top: 3%;
+    margin-left: 13%;
+}
+
+.form {
+    display: flex;
+}
+
+#filter>* {
+
+    padding: 0% 1%;
+    border-radius: 10px;
+    margin: 0px 10px;
+}
+
+#cards {
+    margin-top: 5%;
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#cards>* {
+    margin: 0%;
+    transition: all .2s ease-in-out;
+    transform: scale(0.9);
+}
+
+#cards>*:hover {
+    transform: scale(1.1);
+    z-index: 999;
+    box-shadow: 0px 5px 5px black;
+}
+
+i {
+    font-size: x-large;
+}
+
+#imageprincipal {
+    display: flex;
+    flex-direction: row;
+}
+
+#flex {
+    margin-left: 20px;
+}
+
+#flex>* {
+    width: 80%;
+}
+
+#flex>div>* {
+    margin: 1% 0%;
+    width: 49%;
+}
+
+.input {
+    width: 100%;
+}
+
+.inpu {
+    width: 100%;
+    background-color: rgb(162, 194, 209);
+}
